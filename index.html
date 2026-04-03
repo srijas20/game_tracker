@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Game Index</title>
+<!-- (S) FAVICON + TITLE + SUBTITLE (welc, subt) -->    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- (E) FAVICON + TITLE + SUBTITLE (welc, subt) --> 
+</head>
+
+<body>
+    <header id="header">
+<!-- (S) NAVBAR --> 
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#populargames">trending</a>
+
+
+    </nav>
+<!-- (E) NAVBAR --> 
+
+</header>
+
+    <h1 id="title">Welcome, user!</h1>
+    <h2 id="subt">Quests finished this week: 0/10</h2>
+
+<div id="recentGamesContainer">
+    <div id="gamesDiv">
+        <div id="favouritesHeading">
+            <p id="gamesTitle">Recently Played</p>
+        </div>
+        <div id="gamesContent">
+<!-- (S) BUTTON TO EDIT FAVE GAMES-->            
+            <button id="edit" onclick="toggleEditor()">Edit Games</button>
+<!-- (E) BUTTON TO EDIT FAVE GAMES-->             
+            <div class="gamesBox">
+                <div class="games">
+                    <img src="ftf.webp">
+                    <p>Flee the Facility</p>
+                </div>
+                <div class="games">
+                    <img src="snakes.webp">
+                    <p>The Snakes</p>
+                </div>
+                <div class="games">
+                    <img src="demonology.webp">
+                    <p>Demonology</p>
+                </div>
+                <div class="games">ph</div>
+                <div class="games">ph</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- CSS -->
+
+<style>
+    body{
+        margin-top:120px;
+        background-color:lavender;
+        text-align:center;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    #title{
+        margin-top:100px;
+        line-height:10px;
+    }
+
+    #subt{
+        opacity:0.7;
+        font-size:18px;
+    }
+
+    #recentGamesContainer{
+        display:flex;
+        justify-content: flex-start;
+    }
+
+    #gamesContent{
+        margin-left:20px;
+    }
+
+    #gamesRow{
+        display:flex;
+        gap:10px;
+
+    }
+
+    .gamesBox{
+        display:flex;
+        gap:10px;
+/*scrolling!!!*/        
+        overflow-x:auto;
+    }
+
+    .games{
+        width:275px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    #button{
+        margin:10px;
+        padding:8px 14px;
+        cursor:pointer;
+}
+    #header{
+        position: fixed;
+        top:0; left:0; right:0;
+        padding:2%;
+        background-color: rgb(201, 201, 250);
+        align-items: left;
+        box-shadow: 0 4px 10px rgb(156, 156, 185);
+
+
+    }
+</style>
+
+
+
+
+
