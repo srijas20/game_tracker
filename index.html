@@ -2,76 +2,35 @@
 <html lang="en">
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Game Index</title>
 <!-- (S) FAVICON + TITLE + SUBTITLE (welc, subt) -->    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- (E) FAVICON + TITLE + SUBTITLE (welc, subt) --> 
 </head>
 
-<!-- (S) JS edit games (saving games + editing)-->
-<script>
-    let games = JSON.parse(localStorage,getItem("games")) || []; /*loads the saved games*/
-    function toggleEditor(){ /*open + close the editor*/
-        const editor = document.getElementById("editor");
-
-        if(editor.style.display === "block"){
-            editor.style.display = "none";
-        }
-        else{
-            editor.style.display = "block";
-        }
-    }
-
-  
-</script>
-
-<!-- (E) JS edit games (saving games + editing)-->  
-
 <body>
     <header id="header">
+
 <!-- (S) NAVBAR --> 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#populargames">trending</a>
-
+        <a href="index.html">home</a>
+        <a href="games.html">trending</a>
+        <a href="#profile">profile</a>
 
     </nav>
 <!-- (E) NAVBAR --> 
+
+
 
 </header>
 
     <h1 id="title">Welcome, user!</h1>
     <h2 id="subt">Quests finished this week: 0/10</h2>
 
-<div id="recentGamesContainer">
-    <div id="gamesDiv">
-        <div id="favouritesHeading">
-            <p id="gamesTitle">Recently Played</p>
-        </div>
-        <div id="gamesContent">
-<!-- (S) BUTTON TO EDIT FAVE GAMES-->            
-            <button id="edit" onclick="toggleEditor()">Edit Games</button>
-<!-- (E) BUTTON TO EDIT FAVE GAMES-->             
-            <div class="gamesBox">
-                <div class="games">
-                    <img src="ftf.webp">
-                    <p>Flee the Facility</p>
-                </div>
-                <div class="games">
-                    <img src="snakes.webp">
-                    <p>The Snakes</p>
-                </div>
-                <div class="games">
-                    <img src="demonology.webp">
-                    <p>Demonology</p>
-                </div>
-                <div class="games">ph</div>
-                <div class="games">ph</div>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
+
+
+</body>    
 
 <!-- CSS -->
 
@@ -88,48 +47,7 @@
         line-height:10px;
     }
 
-    #subt{
-        opacity:0.7;
-        font-size:18px;
-    }
-
-    #recentGamesContainer{
-        display:flex;
-        justify-content: flex-start;
-    }
-
-    #gamesContent{
-        margin-left:20px;
-    }
-
-/*layout*/
-    .gamesRow{
-        display:flex;
-        gap:10px;
-
-    }
-/*seperation between games + alligns icons in rows*/
-    .gamesBox{
-        display:flex;
-        gap:10px;
-
-/*scrolling (horizontal) !!!*/        
-        overflow-x:auto;
-    }
-
-/*icon for games*/
-    .games{
-        width:275px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-    }
-    #edit{
-        margin:10px;
-        padding:8px 14px;
-        cursor:pointer;
-}
-/*top heading thingy*/
+/* NAVBAR */
     #header{
         position: fixed;
         top:0; left:0; right:0;
@@ -140,10 +58,14 @@
 
 
     }
+/* BUTTON */
+.button{
+    padding:10px 20px;
+    font-size: 15px;
+    text-align: center;
+    color:rgb(156, 156, 185);
+    box-shadow: 0 3px #999;
+    border-radius: 16px;
+}
+
 </style>
-
-
-
-
-
-
