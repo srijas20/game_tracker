@@ -9,3 +9,349 @@
 <!-- (E) FAVICON + TITLE + SUBTITLE (welc, subt) --> 
 </head>
 
+
+<body>
+    <header id="header">
+
+<!-- (S) NAVBAR --> 
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="games.html">trending</a>
+        <a href="#profile">profile</a>
+
+    </nav>
+<!-- (E) NAVBAR --> 
+
+    </header>
+
+    <h2>Games: </h2>
+<!-- CLASS BUTTONS -->    
+    <div id="gamesContainer"> 
+        <button class="button active" onclick="filterSelection('all')">Show All</button>
+        <button class="button" onclick="filterSelection('roleplay')">Roleplay</button>
+        <button class="button" onclick="filterSelection('simulation')">Simulation</button>
+        <button class="button" onclick="filterSelection('survival')">Survival</button>
+        <button class="button" onclick="filterSelection('obby')">Obby</button>
+        <button class="button" onclick="filterSelection('party')">Party</button>
+    </div>
+<!-- ROLEPLAY -->
+    <div class="row">
+        <div class="column roleplay">
+            <div class="content">
+                <img src="bloxburg.webp">
+                <h4>Welcome to Bloxburg</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column roleplay">
+            <div class="content">
+                <img src="dti.webp">
+                <h4>Dress to Impress</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column roleplay">
+            <div class="content">
+                <img src="growingup.webp">
+                <h4>Growing Up</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        
+<!-- SURVIVAL -->        
+        <div class="column survival">
+            <div class="content">
+                <img src="demonology.webp">
+                <h4>Demonology</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column survival">
+            <div class="content">
+                <img src="99nights.webp">
+                <h4>99 Nights in the Forest</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column survival">
+            <div class="content">
+                <img src="ftf.webp">
+                <h4>Flee the Facility</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column survival">
+            <div class="content">
+                <img src="snakes.webp">
+                <h4>The Snakes</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column survival" >
+            <div class="content">
+                <img src="doors.webp">
+                <h4>DOORS</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+<!-- SIMULATION -->  
+        <div class="column simulation">
+            <div class="content">
+                <img src="fisch.webp">
+                <h4>Fisch</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column simulation">
+            <div class="content">
+                <img src="craftfood.webp">
+                <h4>Craft Food</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column simulation">
+            <div class="content">
+                <img src="beeswarm.webp">
+                <h4>Bee Swarm Simulator</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column simulation">
+            <div class="content">
+                <img src="restycoon3.webp">
+                <h4>Restaurant Tycoon 3</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+        <div class="column simulation">
+            <div class="content">
+                <img src="bab.webp">
+                <h4>Build A Boat For Treasure</h4>
+                <p>add some facts</p>
+            </div>
+        </div>
+<!-- OBBY -->
+        <div class="column obby">
+            <div class="content">
+                <img src="toh.webp">
+                <h4>Tower of Hell</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column obby">
+            <div class="content">
+                <img src="together.webp">
+                <h4>Together</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column obby">
+            <div class="content">
+                <img src="sr4.webp">
+                <h4>Speed Run 4</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+<!-- PARTY -->
+        <div class="column party">
+            <div class="content">
+                <img src="bbingo.webp">
+                <h4>Bloxy Bingo</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column party">
+            <div class="content">
+                <img src="epicminigames.webp">
+                <h4>Epic Minigames</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column party">
+            <div class="content">
+                <img src="hidenseek.webp">
+                <h4>Hide and Seek Extreme</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+        <div class="column party">
+            <div class="content">
+                <img src="rdrama.webp">
+                <h4>Total Roblox Drama</h4>
+                <p>ttt</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+<!-- CSS -->
+
+<style>
+    body{
+        margin-top:120px;
+        background-color:lavender;
+        text-align:center;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    #title{
+        margin-top:100px;
+        line-height:10px;
+    }
+
+/* NAVBAR */
+    .navbar{
+        display: flex;
+        gap: 20px;
+    }
+
+    #header{
+        position: fixed;
+        top:0; left:0; right:0;
+        padding:2%;
+        background-color: rgb(201, 201, 250);
+        align-items: left;
+        box-shadow: 0 4px 10px rgb(156, 156, 185);
+
+
+    }
+/* BUTTON */
+.button{
+    padding:10px 20px;
+    font-size: 15px;
+    text-align: center;
+    color:rgb(156, 156, 185);
+    box-shadow: 0 3px #999;
+    border-radius: 16px;
+}
+
+.button:hover{
+    transform: translateY(-5px);
+    background-color: rgb(232, 211, 240);
+}
+
+.button:active{
+    background-color: rgb(232, 211, 240);
+    box-shadow: 0 5px #6e4f7e;
+    transform: translateY(4px);
+
+}
+
+/* GAME CONTAINORS */
+
+
+.main{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.row{
+    margin: 8px -16px;
+}
+
+.row,
+.row > .column{
+    padding: 8px;
+}
+
+.column{
+      float: left;
+      width: 20%;
+     display: none;
+}
+
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content{
+    background-color: rgba(255, 255, 255, 0.454);
+    padding:10px;
+}
+
+.content img{
+    width: 70%;
+    height: auto;
+}
+
+.content:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 900px){
+    .column{
+        width: 100%;
+    }
+}
+
+
+
+.show{
+    display: block;
+}
+
+
+</style>
+
+
+<script>
+// * JS CODE * //
+
+    filterSelection("all") //excecutes funvtion + shows all  columns
+    function filterSelection(colls){
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if(colls == "all") colls = "";
+
+        for(i = 0; i < x.length; i++){ //adds the 'show' class (aka display"block) to filtered elements + removes show from non-selected elements
+            removeClass(x[i], "show");
+            if(x[i].className.indexOf(colls) > -1) addClass(x[i], "show");
+        }
+    }
+
+    function addClass(element, name){
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for(i = 0; i < arr2.length; i++){
+            if(arr1.indexOf(arr2[i]) == -1){
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+function removeClass(element, name){
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for(i = 0; i < arr2.length; i++){
+    while(arr1.indexOf(arr2[i]) > -1){
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var buttonContainer = document.getElementById("gamesContainer");
+var btns = buttonContainer.getElementsByClassName("button");
+for(var i = 0; i < btns.length; i++){
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+</script>
+
+
+
