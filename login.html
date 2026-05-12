@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Game Index</title>
+<!-- (S) FAVICON + TITLE + SUBTITLE (welc, subt) -->    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- (E) FAVICON + TITLE + SUBTITLE (welc, subt) --> 
+</head>
+
+<body>
+    <header id="header">
+
+<!-- (S) NAVBAR --> 
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="games.html">trending</a>
+        <a href="login.html">profile</a>
+
+    </nav>
+<!-- (E) NAVBAR --> 
+    </header>
+
+
+    
+<!-- (S) LOG IN BOX + BUTTONS-->    
+    <div id="loginBox">
+        <button class="toggle active" onclick="showLogin()">log in</button>
+        <button class="toggle" onclick="showSignup()">sign up</button>
+
+<!-- (E) LOG IN BOX + BUTTONS--> 
+
+<!-- (S) LOG IN FORM --> 
+        <div id="loginForm">
+            <h2>log in</h2>
+            <input type="text" id="userInput" placeholder="username" /><br>
+            <input type="password" placeholder="password" /><br>
+            <button class="button" onclick="storeLogin()">log in</button>
+        </div>
+<!-- (E) LOG IN FORM --> 
+
+<!-- (S) SIGN UP FORM -->
+        <div id="signupForm" style="display:none">
+            <h2>sign up</h2>
+            <input type="text" placeholder="username" /><br>
+            <input type="email" placeholder="email" /><br>
+            <input type="password" placeholder="password" /><br>
+            <button class="button">sign up</button>
+        </div>
+<!-- (E) SIGN UP FORM -->
+    </div>    
+
+</body>
+
+<!-- CSS -->
+
+<style>
+    body{
+        margin-top:120px;
+        background-color:lavender;
+        text-align:center;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    #title{
+        margin-top:100px;
+        line-height:10px;
+    }
+
+/* NAVBAR */
+    #header{
+        position: fixed;
+        top:0; left:0; right:0;
+        padding:2%;
+        background-color: rgb(201, 201, 250);
+        align-items: left;
+        box-shadow: 0 4px 10px rgb(156, 156, 185);
+    }
+    
+    .navbar{
+        display: flex;
+        gap: 20px;
+    }
+
+
+    
+/* LOG IN*/
+    #loginBox{
+        background-color: rgb(156, 156, 185);
+        width: 300px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px #6e4f7e;
+    }
+
+/*INPUT */
+    #input{
+        width: 80%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 10px;
+        border: 1px #6e4f7e;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+
+
+/* BUTTON */
+.button{
+    padding:10px 20px;
+    font-size: 15px;
+    text-align: center;
+    color:rgb(156, 156, 185);
+    box-shadow: 0 3px #999;
+    border-radius: 16px;
+}
+
+.button:hover{
+    transform: translateY(-5px);
+    background-color: rgb(232, 211, 240);
+}
+
+.button:active{
+    background-color: rgb(232, 211, 240);
+    box-shadow: 0 5px #6e4f7e;
+    transform: translateY(4px);
+
+}
+
+/* TOGGLES */
+.toggle{
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    color: #6e4f7e;
+}
+
+.toggle.active{
+    font-weight: bold;
+}
+
+</style>
+
+<script>
+//JS
+
+    function showLogin(){
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("signupForm").style.display = "none";
+
+        document.querySelectorAll(".toggle").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".toggle")[0].classList.add("active");
+    }
+
+    function showSignup(){
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("signupForm").style.display = "block";
+
+        document.querySelectorAll(".toggle").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".toggle")[1].classList.add("active");
+    }
+
+
+    function storeLogin(){
+        var username = document.getElementById("userInput").value;
+        localStorage.setItem("username", username);
+
+        window.location.href = "index.html"
+    }
+</script>
+
+
+</html>

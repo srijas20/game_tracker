@@ -16,7 +16,7 @@
     <nav class="navbar">
         <a href="index.html">home</a>
         <a href="games.html">trending</a>
-        <a href="#profile">profile</a>
+        <a href="login.html">profile</a>
 
     </nav>
 <!-- (E) NAVBAR --> 
@@ -25,7 +25,7 @@
 
 </header>
 
-    <h1 id="title">Welcome, user!</h1>
+    <h1 id="title">Welcome, <span id="displayName"></span>!</h1>
     <h2 id="subt">Quests finished this week: 0/10</h2>
 
 
@@ -55,9 +55,13 @@
         background-color: rgb(201, 201, 250);
         align-items: left;
         box-shadow: 0 4px 10px rgb(156, 156, 185);
-
-
     }
+    
+    .navbar{
+        display: flex;
+        gap: 20px;
+    }
+
 /* BUTTON */
 .button{
     padding:10px 20px;
@@ -69,3 +73,13 @@
 }
 
 </style>
+
+<script>
+//JS
+    var savedName = localStorage.getItem("username");
+
+    if(savedName){
+        document.getElementById("displayName").innerText = savedName;
+    }
+
+</script>
